@@ -13,7 +13,7 @@ r=num2str(rada);
 
 for i=1:numel(a)
 	CaseName=a(i).name; 
-	PatchFold=[foldtrain  CaseName '\Patch_' xy '_' xy '_' z];%对应更改
+	PatchFold=[foldtrain  CaseName '\Patch_' xy '_' xy '_' z];%艣脭脫艢赂眉赂脛
 
 	%if exist(PatchFold,'dir')
 
