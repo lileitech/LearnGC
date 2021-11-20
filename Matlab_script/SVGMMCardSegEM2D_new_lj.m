@@ -5,7 +5,7 @@ ncomp=sum(nc);
 xsize=size(x);
 
 %=========initialization==============
-classflag=zeros(sum(nc),1);%标志每个component所属的类
+classflag=zeros(sum(nc),1);%卤锚脰戮脙驴赂枚component脣霉脢么碌脛脌脿
 %--devide the probability of each class into corresponding conponents
 counter=1;
 for i=1:nclass
