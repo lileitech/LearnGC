@@ -1,0 +1,4 @@
+SUBDIRS( 
+GenMeshWall GenMeshWallLabel GenMeshProb PatchExtractForTraining PatchExtractForTest GraphCut ScarSegByThreshold GenWallLabel_zxh GenLAlabel_zxh GenPatchLabel PatchExtractForTraining_MS PatchExtractForTest_MS PatchExtractForTraining_MS_M PatchExtractForTest_MS_M
+)
+
