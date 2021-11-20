@@ -1,13 +1,13 @@
 
-%   ÊµÑé²½Öè
+%   å®éªŒæ­¥éª¤
 % 1.	Smooth LA
-% 2.	Éú³ÉLA_Mesh_M.stl
-% 3.	Éú³ÉLA_label_GauiisanBlur_M.nii.gz
-% 4.	Éú³Éen_seg_msp_M.nii.gz
-% 5.	Éú³ÉLA_MeshWall_M.nii.gz
-% 6.	Éú³ÉLA_MeshWallLabel_M.nii.gz
-% 7.	Éú³ÉLA_PatchLabel_M.nii.gz
-% 8.	Éú³Édist image,´Ó¶øÉú³ÉLA_MeshWall_422_prob_M.nii.gz
+% 2.	ç”ŸæˆLA_Mesh_M.stl
+% 3.	ç”ŸæˆLA_label_GauiisanBlur_M.nii.gz
+% 4.	ç”Ÿæˆen_seg_msp_M.nii.gz
+% 5.	ç”ŸæˆLA_MeshWall_M.nii.gz
+% 6.	ç”ŸæˆLA_MeshWallLabel_M.nii.gz
+% 7.	ç”ŸæˆLA_PatchLabel_M.nii.gz
+% 8.	ç”Ÿæˆdist image,ä»è€Œç”ŸæˆLA_MeshWall_422_prob_M.nii.gz
 
 clc;clear all;
 verbose=' -v 0 ' ;
@@ -39,18 +39,18 @@ for i=3:numel(a)
     ManualLAAndAutoWHS=[foldtrain  CaseName '\en_seg_msp_M.nii.gz'];      
 	command=['zxhimageop -int ' AutoWHS ' -o ' ManualLAAndAutoWHS ' zxhimageop -vr 420 420 -vs 0 ' verbose]; system(command); %remove from WHS?auto?
     command=['zxhimageop -int ' ManualLAAndAutoWHS ' -int ' SmoothManualLASeg ' -o ' ManualLAAndAutoWHS ' -sum ' verbose]; system(command);  %add Manual LA(smooth)   
-    % ÔÚmitral valve»òÆäËûÎ»ÖÃÉÏ£¬Èç¹û³öÏÖ¿Õ¶´£¬ÓÃclosingÀ´Ìî³äÉÏ¿Õ¶´µÄ²¿·Ö£¬×¢ÒâÑ¡ÔñÒ»¸öºÏÊÊµÄ²ÎÊı£¬²»ÄÜÈÃÕâ¸öclosingµÄ·¶Î§¡°Ã»ÓĞ±ØÒªµÄ¡±¹ı´ó;  
+    % åœ¨mitral valveæˆ–å…¶ä»–ä½ç½®ä¸Šï¼Œå¦‚æœå‡ºç°ç©ºæ´ï¼Œç”¨closingæ¥å¡«å……ä¸Šç©ºæ´çš„éƒ¨åˆ†ï¼Œæ³¨æ„é€‰æ‹©ä¸€ä¸ªåˆé€‚çš„å‚æ•°ï¼Œä¸èƒ½è®©è¿™ä¸ªclosingçš„èŒƒå›´â€œæ²¡æœ‰å¿…è¦çš„â€è¿‡å¤§;  
 	command=['zxhimageop -int ' ManualLAAndAutoWHS ' -CL 1.5 ' verbose]; system(command);   
-    % °Ñµş¼ÓÉÏManual LA(smoothºóµÄ)ºóµÄ£¬µş¼Ólabel¶¼¹éÎª420 £¨LAÊÕÄÉºó¹¬À²¹ş¹ş£©
+    % æŠŠå åŠ ä¸ŠManual LA(smoothåçš„)åçš„ï¼Œå åŠ labeléƒ½å½’ä¸º420 ï¼ˆLAæ”¶çº³åå®«å•¦å“ˆå“ˆï¼‰
     command=['zxhimageop -int ' ManualLAAndAutoWHS ' -o ' ManualLAAndAutoWHS ' -vr 625 625 -vr 920 920 -vr 970 970 -vr 1240 1240 -vr 1270 1270 -vs 420 ' verbose]; system(command);
     
-    %------------------Éú³ÉLA_MeshWall_M.nii.gz-----------------
+    %------------------ç”ŸæˆLA_MeshWall_M.nii.gz-----------------
     command=['GenMeshWall ' foldtrain ' ' CaseName];   system(command); 
     
-    %------------------Éú³ÉLA_MeshWallLabel_M.nii.gz-----------------
+    %------------------ç”ŸæˆLA_MeshWallLabel_M.nii.gz-----------------
     command=['GenMeshWallLabel ' foldtrain ' ' CaseName];system(command);  
     
-%      %------------------Éú³ÉLA_PatchLabel_M.nii.gz(ÕÒ³ö½»²æÇøÓò)-----------------
+%      %------------------ç”ŸæˆLA_PatchLabel_M.nii.gz(æ‰¾å‡ºäº¤å‰åŒºåŸŸ)-----------------
 %     command=['GenPatchLabel ' foldtrain ' ' CaseName];system(command);  
   
      %------------------Generate dist file------------------
@@ -82,7 +82,7 @@ for i=3:numel(a)
 % 	command=['zxhimageop -int ' imgLab ' -vr 0 400 -vr 430 1000 -vs 0 ' verbose]; system(command); %others are set 0
 % 	command=['zxhvolumelabelop ' imgLab ' ' Prob ' -genprobf ' num2str(fstdForGenerateProb) ' ' imgLab verbose]; system(command) ;
     
-%     %----------------ÊÔÍ¼Ê¹ÓÃclosingµÄ°ì·¨£¬¼ì²â½»½çÇøÓò----------------
+%     %----------------è¯•å›¾ä½¿ç”¨closingçš„åŠæ³•ï¼Œæ£€æµ‹äº¤ç•ŒåŒºåŸŸ----------------
 %     ClosingWHS=[foldtrain  CaseName '\en_seg_msp_Closing.nii.gz'];
 %     JointRegionLA=[foldtrain  CaseName '\JointRegionLA.nii.gz'];   
 %     command=['zxhimageop -int ' ManualLAAndAutoWHS ' -o ' ClosingWHS ' -CL 2 ' verbose]; system(command);
