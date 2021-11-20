@@ -1,4 +1,4 @@
-# AtrialJSQnet
+# LearnGC
 
 ## Overview
 The repository contains the core codes of "[Atrial scar quantification via multi-scale CNN in the graph-cuts framework](https://www.sciencedirect.com/science/article/pii/S1361841519301355)".
