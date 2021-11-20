@@ -16,6 +16,7 @@ Besides, GenerateModelsFromLabels.cxx was used to convert 3D label into 3D mesh.
 You may also be interested in following papers:
 1. [AtrialJSQnet: A New Framework for Joint Segmentation and Quantification of Left Atrium and Scars Incorporating Spatial and Shape Information](https://www.sciencedirect.com/science/article/pii/S1361841521003480)
 2. [Medical Image Analysis on Left Atrial LGE MRI for Atrial Fibrillation Studies: A Review](https://arxiv.org/pdf/2106.09862.pdf)
+3. [AtrialGeneral: Domain Generalization for Left Atrial Segmentation of Multi-center LGE MRIs](https://link.springer.com/chapter/10.1007/978-3-030-87231-1_54)
 
 
 ## Cite
