@@ -2,7 +2,14 @@
 
 ## Overview
 The repository contains the core codes of "[Atrial scar quantification via multi-scale CNN in the graph-cuts framework](https://www.sciencedirect.com/science/article/pii/S1361841519301355)".
-Note that 
+The resposutory includes three folds:
+### app_MedAI2018 fold
+This fold includes the original C++ scripts to generate the multi-scale patches and the pre-processing code for LearnGC.
+### MS-CNN fold
+This fold includes the python code to train and test the LearnGC architecture.
+### Matlab_script fold
+This fold includes some pre-processing scripts employed in AtrialJSQnet, and some of these scripts aimed to use the generated C++ tools mentioned in the C++ script fold.
+
 
 ## Releated work
 You may also be interested in following papers:
