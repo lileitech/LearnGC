@@ -10,6 +10,7 @@ This fold includes the python code to train and test the LearnGC architecture.
 ### Matlab_script fold
 This fold includes some pre-processing scripts employed in AtrialJSQnet, and some of these scripts aimed to use the generated C++ tools mentioned in the C++ script fold.
 
+Besides, GenerateModelsFromLabels.cxx was used to convert 3D label into 3D mesh.
 
 ## Releated work
 You may also be interested in following papers:
