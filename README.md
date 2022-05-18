@@ -8,7 +8,7 @@ This fold includes the original C++ scripts to generate the multi-scale patches 
 ### MS-CNN fold
 This fold includes the python code to train and test the LearnGC architecture.
 ### Matlab_script fold
-This fold includes some pre-processing scripts employed in AtrialJSQnet, and some of these scripts aimed to use the generated C++ tools mentioned in the C++ script fold.
+This fold includes some pre-processing scripts employed in LearnGC, and some of these scripts aimed to use the generated C++ tools mentioned in the C++ script fold.
 
 Besides, GenerateModelsFromLabels.cxx was used to convert 3D label into 3D mesh.
 
@@ -33,6 +33,6 @@ If this code is useful for you, please kindly cite this work via:
 }
 
 
-If you have any questions, you are always welcome to contact with lilei.sky@sjtu.edu.cn.
+If you have any questions, you are always welcome to contact with lilei.sky@outlook.com.
 
 
